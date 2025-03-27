@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Editor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="top">
+            <div class="html-editor editor">
+                 <div class="under-logo">
+                    <label for="">HTML</label>
+                    <img src="htmlLogo.png" alt="HTML logo">
+                    <button class="btn1"><img src="copyLogo.png" alt="Copy icon" class="copy"></button>
+                 </div>
+                 <hr>
+                 <textarea class="text1" placeholder="Write your HTML code here..."></textarea>
+            </div>
+            <div class="css-editor editor">
+                 <div class="under-logo">
+                    <label for="">CSS</label>
+                    <img src="cssLogo.png" alt="CSS logo">
+                   <button class="btn2"><img src="copyLogo.png" alt="Copy icon" class="copy"></button>
+                 </div>
+                 <hr>
+                 <textarea class="text2" placeholder="Write your CSS code here..."></textarea>
+            </div>
+            <div class="js-editor editor">
+                <div class="under-logo">
+                    <label for="">JavaScript</label>
+                    <img src="jsLogo.png" alt="JS logo">
+                    <button class="btn3"><img src="copyLogo.png" alt="Copy icon" class="copy"></button>
+                </div>
+                <hr/>
+                <textarea class="text3" placeholder="Write your JavaScript code here..."></textarea>
+            </div>
+        </div>
+        <div class="buttom">
+            <div class="ter"> 
+                <h2>Terminal</h2>
+                <button class="hide"><img src="show.png" alt="Hide/Show Terminal"></button>
+            </div>
+            <iframe id="output" name="output"></iframe>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

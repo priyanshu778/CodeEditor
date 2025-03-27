@@ -1,0 +1,224 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', monospace;
+    background: linear-gradient(135deg, #282c34, #4c80e4);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    overflow: hidden;
+    animation: backgroundAnimation 10s infinite alternate;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 90%; /* Increased to give more space */
+    max-width: 1200px;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap; /* Ensures editors wrap on smaller screens */
+}
+
+.editor {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 15px;
+    width: 30%; /* Flexible width for editors */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    margin-bottom: 20px; /* Adds space between editors */
+}
+
+.editor:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.under-logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.under-logo label {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.under-logo img {
+    width: 30px;
+    height: auto;
+}
+
+.text1, .text2, .text3 {
+    width: 100%;
+    height: 200px;
+    background: #2c2f38;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    padding: 10px;
+    font-family: 'Courier New', monospace;
+    font-size: 16px;
+    line-height: 1.5;
+    resize: none;
+    transition: background 0.3s ease;
+    margin-top: 10px;
+}
+
+.text1:focus, .text2:focus, .text3:focus {
+    background: #3b3f47;
+    outline: none;
+}
+
+.btn1, .btn2, .btn3 {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.copy {
+    width: 20px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.copy:hover {
+    transform: scale(1.2);
+}
+
+/* Bottom Section */
+.buttom {
+    margin-top: 30px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 15px;
+    border-radius: 8px;
+    position: relative;
+    width: 100%;
+}
+
+.ter h2 {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.hide img {
+    width: 30px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.hide img:hover {
+    transform: rotate(90deg);
+}
+
+/* Increased the height of the iframe for more visible code */
+#iframe {
+    width: 100%;
+    height: 600px; /* Increased height to show more content */
+    border: none;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+/* Animations */
+@keyframes backgroundAnimation {
+    0% {
+        background: linear-gradient(135deg, #ff6600, #ff0066);
+    }
+    100% {
+        background: linear-gradient(135deg, #0066ff, #ff6600);
+    }
+}
+
+/* Media Queries for Responsiveness */
+
+/* For tablets (landscape and portrait) */
+@media screen and (max-width: 1024px) {
+    .top {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+    }
+
+    .editor {
+        width: 100%;
+        margin-bottom: 15px; /* Adjust spacing between editors */
+    }
+
+    .buttom {
+        margin-top: 20px;
+    }
+
+    #iframe {
+        height: 500px; /* Reduce iframe height for medium screens */
+    }
+}
+
+/* For mobile screens (portrait and smaller) */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 10px; /* Add padding for smaller screens */
+    }
+
+    .top {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .editor {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #iframe {
+        height: 400px; /* Reduce iframe height for mobile */
+    }
+
+    .buttom {
+        margin-top: 15px;
+    }
+
+    .ter h2 {
+        font-size: 18px; /* Reduce font size for smaller screens */
+    }
+
+    .hide img {
+        width: 25px;
+    }
+}
+
+/* For very small screens (e.g., phones with very small displays) */
+@media screen and (max-width: 480px) {
+    .under-logo label {
+        font-size: 16px; /* Smaller label size for small screens */
+    }
+
+    .text1, .text2, .text3 {
+        height: 150px; /* Decrease text area height for small screens */
+    }
+
+    #iframe {
+        height: 350px; /* Decrease iframe height */
+    }
+
+    .ter h2 {
+        font-size: 16px; /* Reduce font size even further */
+    }
+}
